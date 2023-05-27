@@ -1,0 +1,173 @@
+<div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="">
+                    <h2>Шаг первый</h2>
+                </div>
+                <div class="col text-end">
+                    <button class="close-modal">x</button>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">                
+                <div class="col-7 col-lg-5">
+                    <div class="">
+                        <p>вопрос0</p>
+                        <div class="col">
+                            <input type="radio" name="year" value="11" id="11">
+                            <label class="label_step_1" for="11">ответ</label>
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="year" value="12" id="12">
+                            <label class="label_step_1" for="12">ответ</label>
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="year" value="13" id="13">
+                            <label class="label_step_1" for="13">ответ</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 col-lg-6 text-center">
+                    <h3>Шаг 1 из 4</h3>                    
+                    <div class="col text-center">
+                        <button class="p-2 mt-5" onclick="showModal2()">Далее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="">
+                    <h2>Шаг второй</h2>
+                </div>
+                <div class="col text-end">
+                    <button class="px-4" onclick="showModal1back()"><<</button>
+                    <button class="close-modal">x</button>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-7 col-lg-5">
+                    <p class="">вопрос1</p>
+                    <label class="label_step_2" for="21"><input type="radio" name="work" value="1" id="21">ответ </label>
+                    <label class="label_step_2" for="22"><input type="radio" name="work" value="2" id="22">ответ</label>
+                    <label class="label_step_2" for="23"><input type="radio" name="work" value="3" id="23">ответ</label>
+                </div>
+                <div class="col-5 col-lg-6 text-center">
+                    <h3>Шаг 2 из 4</h3>                    
+                    <div class="col text-center">
+                        <button class="p-2 mt-5" onclick="showModal3()">Далее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col">
+                    <h2 class="col d-none d-lg-block">Шаг третий</h2>
+                </div>
+                <div class="col text-end">
+                    <button class="px-4" onclick="showModal2back()"><<</button>
+                    <button class="close-modal">x</button>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-7 col-lg-5">
+                    <p class="">вопрос2</p>
+                    <label class="label_step_3"><input type="radio" name="interes" value="1" id="1">ответ</label>
+                    <label class="label_step_3"><input type="radio" name="interes" value="2" id="2">ответ</label>
+                    <label class="label_step_3"><input type="radio" name="interes" value="3" id="3">ответ</label>
+                </div>
+                <div class="col-5 col-lg-6 text-center">
+                    <h3>Шаг 3 из 4</h3>                    
+                    <div class="col text-center">
+                        <button class="p-2 mt-5" onclick="showModal4()">Далее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="myForm" action="" method="POST">
+        @csrf
+        @method('post')
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="">Шаг четвертый</h2>
+                    </div>
+                    <div class="col text-end">
+                        <button class="px-4" onclick="showModal3back()"><<</button>
+                        <button class="close-modal">x</button>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-6 col-lg-5">
+                        <p>вопрос</p>
+                        <label for="city"></label>
+                        <input type="text" id="city" name="city"  placeholder="Название" required>
+                    </div>
+                    <div class="col-6 col-lg-6 text-center">
+                        <h3>Шаг 4 из 4</h3>
+                        <div class="col text-center">
+                            <button class="p-2 mt-5" id="city-button" disabled onclick="showModal5()">Завершить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col">
+                    </div>
+                    <div class="col text-end">
+                        <button class="close-modal">x</button>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-lg-7">
+                        <h5 >заголовок<br></h5>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="col"><label class="label_step_5" for="name">Ваше имя:</label></div>
+                                <div class="col"><input type="text" id="name" name="name" placeholder="Имя" required></div>
+                                <div class="col"><label class="label_step_5" for="tel"></label></div>
+                                <div class="col"><input type="text" id="tel" name="tel" placeholder="Телефон"></div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row mt-3">
+                            <div class="col-1 d-flex justify-content-center align-items-center">
+                                <input class="custom-checkbox" id="checkbox"
+                                       type="checkbox" name="checkbox" height="30px" width="30px"
+                                       onchange="document.getElementById('submit').disabled = !this.checked;" />
+                            </div>
+                            <div class="col-11">
+                                <label class="" for="checkbox">Соглашаюсь на обработку<a class="text_p" href=""> персональных данных</a></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <button disabled="disabled" type="submit" name="submit" id="submit" class="mt-4">Действие</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div id="modal6" class="modal">
+        <div class="modal-content d-flex justify-content-center align-items-center quiz_bg_start">
+            <div class="text-center">
+                <h6>В ближайшее время с вами свяжется менеджер </h6>
+            </div>
+            <button class="close-modal mt-5">Закрыть</button>
+        </div>
+    </div>
